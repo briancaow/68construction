@@ -5,15 +5,18 @@ import ContactForm from "@/components/ContactForm";
 import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { SizeMe } from "react-sizeme";
 
 export default function Home() {
   return (
     <div className="flex flex-col h-screen">
-      <div className="flex flex-row w-full justify-between px-2 bg-gray-700">
-        <div className="text-white">
-          (206) 383-4582 | 68constructionllc@gmail.com
+      <div className="hidden lg:block">
+        <div className="flex flex-row w-full justify-between px-2 bg-gray-700">
+          <div className="text-white">
+            (206) 383-4582 | 68constructionllc@gmail.com
+          </div>
+          <div className="text-white">Instagram | Facebook</div>
         </div>
-        <div className="text-white">Instagram | Facebook</div>
       </div>
 
       <div className="flex flex-col lg:flex-row pt-1 text-center bg-slate-50">
@@ -36,7 +39,8 @@ export default function Home() {
         <Hero />
 
         {/* Portfolio */}
-        <Portfolio />
+        <SizeMe>{({ size }) => <Portfolio width={size.width} />}</SizeMe>
+
         {/* Team */}
 
         {/* Builds */}
