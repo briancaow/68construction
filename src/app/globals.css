@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 h1 {
-  @apply text-2xl;
+  @apply text-4xl;
   @apply font-serif;
   @apply text-red-700;
 }
 h2 {
-  @apply text-xl;
+  @apply text-4xl;
   @apply text-black;
   @apply font-serif;
 }

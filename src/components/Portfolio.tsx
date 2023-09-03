@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import sizeMe from "react-sizeme";
 import StackGrid, { Grid } from "react-stack-grid";
-import type { InferGetStaticPropsType, GetStaticProps } from "next";
 import Dropdown from "react-bootstrap/Dropdown";
+
 function Portfolio(props: any) {
   const { width } = props;
-  const columnWidth = width >= 1024 ? 300 : width >= 768 ? 500 : 300;
+  const columnWidth = width >= 1024 ? 600 : width >= 768 ? 500 : 300;
   const numPics = {
     bathrooms: 13,
     decks: 9,
@@ -28,41 +28,57 @@ function Portfolio(props: any) {
   }
 
   const [category, setCategory] = useState(Category.bathrooms);
-
+  const gridRef = useRef<Grid>();
   const pics = [];
   for (let i = 1; i <= numPics[category]; i++) {
     pics.push(
-      <Image
-        alt={`portfolio photo: ${i}`}
-        src={`/portfolio/${category}/${category.slice(0, -1)}_${i}.JPG`}
-        width={columnWidth}
-        height={columnWidth}
-      />
+      <div className="transition overflow-hidden">
+        <a
+          href={`/portfolio/${category}/${category.slice(0, -1)}_${i}.JPG`}
+          target="_blank"
+        >
+          <Image
+            className="hover:scale-125 duration-300"
+            alt={`portfolio photo: ${i}`}
+            src={`/portfolio/${category}/${category.slice(0, -1)}_${i}.JPG`}
+            width={columnWidth}
+            height={columnWidth}
+          />
+        </a>
+      </div>
     );
   }
-  for (let value in Category) {
-    console.log(value);
-  }
+
   return (
-    <div className="flex flex-col items-center px-10 w-full">
+    <div className="flex flex-col items-center px-10 py-4 space-y-2 w-full">
       <h2>Portfolio</h2>
       <Dropdown>
-        <Dropdown.Toggle variant="primary">{category}</Dropdown.Toggle>
+        <Dropdown.Toggle variant="secondary">{category}</Dropdown.Toggle>
         <Dropdown.Menu>
           {Object.values(Category).map((key, i) => (
             <Dropdown.Item
               key={i}
               onClick={() => {
                 setCategory(key);
+                setTimeout(() => {
+                  gridRef.current?.updateLayout();
+                }, 1000);
+                setTimeout(() => {
+                  gridRef.current?.updateLayout();
+                }, 5000);
               }}
             >
-              {key}
+              <div className="text-2xl">{key}</div>
             </Dropdown.Item>
           ))}
         </Dropdown.Menu>
       </Dropdown>
       <div className="w-full">
-        <StackGrid monitorImagesLoaded={true} columnWidth={columnWidth}>
+        <StackGrid
+          gridRef={(grid) => (gridRef.current = grid)}
+          monitorImagesLoaded={true}
+          columnWidth={columnWidth}
+        >
           {pics}
         </StackGrid>
       </div>
