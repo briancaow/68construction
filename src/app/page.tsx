@@ -9,6 +9,7 @@ import { SizeMe } from "react-sizeme";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import { useRef } from "react";
+import NavigationButton from "@/components/NavigationButton";
 
 export default function Home() {
   const handleScroll = (ref: any) => {
@@ -21,7 +22,7 @@ export default function Home() {
   const PortfolioRef = useRef(null);
 
   return (
-    <div className="relative flex flex-col h-screen">
+    <div className="relative flex flex-col">
       <header className="fixed top-0 z-20 w-full">
         {/* <div className="hidden lg:block">
           <div className="flex flex-row w-full justify-between px-2 bg-gray-700">
@@ -34,34 +35,32 @@ export default function Home() {
 
         <div className="flex flex-col lg:flex-row pt-1 text-center bg-opacity-90 bg-slate-50">
           <div className="flex flex-col p-3 lg:items-start">
-            <h1 className="text-5xl text-red-700">68CONSTRUCTION</h1>
+            <h1 className="lg:text-4xl text-xl">68CONSTRUCTION</h1>
           </div>
           <div className="flex flex-row items-center justify-end w-full">
             <div className="pr-3 space-x-3 hidden lg:block">
-              <button
-                className="text-lg p-3 text-red-700"
+              <NavigationButton
                 onClick={() => {
                   handleScroll(AboutUsRef);
                 }}
               >
                 About Us
-              </button>
-              <button
-                className="text-lg p-3 text-red-700"
+              </NavigationButton>
+              <NavigationButton
                 onClick={() => {
                   handleScroll(ServicesRef);
                 }}
               >
                 Services
-              </button>
-              <button
-                className="text-lg p-3 text-red-700"
+              </NavigationButton>
+              <NavigationButton
                 onClick={() => {
                   handleScroll(PortfolioRef);
                 }}
               >
                 Portfolio
-              </button>
+              </NavigationButton>
+
               <button className="text-lg p-3 text-red-700">Contact</button>
               <button className="text-lg p-3 text-red-700">Testimonials</button>
               <button className="text-lg p-3 text-red-700">FAQs</button>

@@ -2,22 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-  @apply text-4xl;
-  @apply font-serif;
-  @apply text-red-700;
-}
-h2 {
-  @apply text-xl;
-  @apply text-black;
-  @apply font-serif;
-  @apply text-red-700;
-}
-div {
-  @apply font-serif;
+@layer base {
+  h1 {
+    @apply text-4xl;
+    @apply font-serif;
+    @apply text-red-700;
+  }
+  h2 {
+    @apply text-5xl;
+    @apply font-serif;
+    @apply text-red-700;
+  }
+  div {
+    @apply font-serif;
+  }
+
+  p {
+    @apply font-serif;
+    @apply text-2xl;
+  }
 }
 
-p {
-  @apply font-serif;
-  @apply text-2xl;
+svg.star-svg {
+  display: inline;
 }

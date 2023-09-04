@@ -8,7 +8,8 @@ function Portfolio(props: any) {
   const { width } = props;
   const columnWidth = width >= 1024 ? 600 : width >= 768 ? 500 : 300;
   const numPics = {
-    Bathrooms: 13,
+    Showers: 6,
+    Bathrooms: 7,
     Decks: 9,
     Fences: 4,
     Fireplaces: 2,
@@ -18,6 +19,7 @@ function Portfolio(props: any) {
   };
 
   enum Category {
+    Showers = "Showers",
     Bathrooms = "Bathrooms",
     Decks = "Decks",
     Fences = "Fences",
@@ -27,7 +29,7 @@ function Portfolio(props: any) {
     Pavements = "Pavements",
   }
 
-  const [category, setCategory] = useState(Category.Bathrooms);
+  const [category, setCategory] = useState(Category.Showers);
   const gridRef = useRef<Grid>();
   const pics = [];
   for (let i = 1; i <= numPics[category]; i++) {
@@ -51,7 +53,7 @@ function Portfolio(props: any) {
 
   return (
     <div className="flex flex-col items-center px-10 w-full space-y-4 py-20">
-      <h2>Portfolio</h2>
+      <h2 className="text-5xl">Portfolio</h2>
       <Dropdown>
         <Dropdown.Toggle size="lg" variant="secondary">
           {category}

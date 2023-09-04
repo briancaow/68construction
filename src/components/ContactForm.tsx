@@ -35,19 +35,25 @@ export default function ContactForm() {
     }
   }
   return (
-    <div className="justify-center flex flex-col lg:flex-row items-center p-5 space-y-4 w-full bg-red-950">
+    <div className="justify-center flex flex-col lg:flex-row items-center py-20 space-y-4 w-full bg-red-950">
       {/* <InlineWidget url="https://calendly.com/68construction" /> */}
       <h2 className="text-center m-4 text-4xl text-white">
         Ready to see your dream projects come to life?
       </h2>
-      <a className="m-2" href="https://calendly.com/68construction/30min">
-        <div className="whitespace-nowrap bg-white text-black p-5 text-3xl">
-          Get Free Consultation
+      <a
+        className="m-2 p-2 md:p-10 bg-white"
+        href="https://calendly.com/68construction/30min"
+      >
+        <div className="whitespace-nowrap text-black text-3xl">
+          Get A Free Consultation
         </div>
       </a>
-      <a className="m-2" href="https://calendly.com/68construction/estimate">
-        <div className="whitespace-nowrap bg-white text-black p-5 text-3xl">
-          Schedule Estimate
+      <a
+        className="m-2 md:p-10 p-2 bg-white"
+        href="https://calendly.com/68construction/estimate"
+      >
+        <div className="whitespace-nowrap bg-white text-black text-3xl">
+          Schedule An Estimate
         </div>
       </a>
       {/* <div className="w-full">
