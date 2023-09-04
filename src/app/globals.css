@@ -8,10 +8,16 @@ h1 {
   @apply text-red-700;
 }
 h2 {
-  @apply text-4xl;
+  @apply text-xl;
   @apply text-black;
   @apply font-serif;
+  @apply text-red-700;
 }
 div {
   @apply font-serif;
+}
+
+p {
+  @apply font-serif;
+  @apply text-2xl;
 }

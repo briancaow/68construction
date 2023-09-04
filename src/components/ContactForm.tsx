@@ -1,8 +1,5 @@
 "use client";
-
-import { disconnect } from "process";
 import { useState } from "react";
-
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
 
@@ -38,9 +35,22 @@ export default function ContactForm() {
     }
   }
   return (
-    <div className="flex flex-col items-center p-5 max-w-[600px] w-full bg-slate-300">
-      <h2>Connect with us</h2>
-      <div className="w-full">
+    <div className="justify-center flex flex-col lg:flex-row items-center p-5 space-y-4 w-full bg-red-950">
+      {/* <InlineWidget url="https://calendly.com/68construction" /> */}
+      <h2 className="text-center m-4 text-4xl text-white">
+        Ready to see your dream projects come to life?
+      </h2>
+      <a className="m-2" href="https://calendly.com/68construction/30min">
+        <div className="whitespace-nowrap bg-white text-black p-5 text-3xl">
+          Get Free Consultation
+        </div>
+      </a>
+      <a className="m-2" href="https://calendly.com/68construction/estimate">
+        <div className="whitespace-nowrap bg-white text-black p-5 text-3xl">
+          Schedule Estimate
+        </div>
+      </a>
+      {/* <div className="w-full">
         <form onSubmit={handleSubmit}>
           <div className="w-full flex flex-col my-4">
             <label className="font-bold text-black" htmlFor="name">
@@ -101,7 +111,7 @@ export default function ContactForm() {
             Send Message
           </button>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 }

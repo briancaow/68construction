@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="relative w-full min-h-[90vh] bg-purple-600 flex flex-col justify-center items-center">
+    <div className="relative w-full min-h-screen flex flex-col justify-center items-center">
       <Image
         className="z-0 brightness-50"
         src={

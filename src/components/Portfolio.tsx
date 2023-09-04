@@ -8,26 +8,26 @@ function Portfolio(props: any) {
   const { width } = props;
   const columnWidth = width >= 1024 ? 600 : width >= 768 ? 500 : 300;
   const numPics = {
-    bathrooms: 13,
-    decks: 9,
-    fences: 4,
-    fireplaces: 2,
-    floorings: 9,
-    kitchens: 7,
-    pavements: 7,
+    Bathrooms: 13,
+    Decks: 9,
+    Fences: 4,
+    Fireplaces: 2,
+    Floorings: 9,
+    Kitchens: 7,
+    Pavements: 7,
   };
 
   enum Category {
-    bathrooms = "bathrooms",
-    decks = "decks",
-    fences = "fences",
-    fireplaces = "fireplaces",
-    floorings = "floorings",
-    kitchens = "kitchens",
-    pavements = "pavements",
+    Bathrooms = "Bathrooms",
+    Decks = "Decks",
+    Fences = "Fences",
+    Fireplaces = "Fireplaces",
+    Floorings = "Floorings",
+    Kitchens = "Kitchens",
+    Pavements = "Pavements",
   }
 
-  const [category, setCategory] = useState(Category.bathrooms);
+  const [category, setCategory] = useState(Category.Bathrooms);
   const gridRef = useRef<Grid>();
   const pics = [];
   for (let i = 1; i <= numPics[category]; i++) {
@@ -50,10 +50,12 @@ function Portfolio(props: any) {
   }
 
   return (
-    <div className="flex flex-col items-center px-10 py-4 space-y-2 w-full">
+    <div className="flex flex-col items-center px-10 w-full space-y-4 py-20">
       <h2>Portfolio</h2>
       <Dropdown>
-        <Dropdown.Toggle variant="secondary">{category}</Dropdown.Toggle>
+        <Dropdown.Toggle size="lg" variant="secondary">
+          {category}
+        </Dropdown.Toggle>
         <Dropdown.Menu>
           {Object.values(Category).map((key, i) => (
             <Dropdown.Item
