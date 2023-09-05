@@ -40,19 +40,13 @@ export default function ContactForm() {
       <h2 className="text-center m-4 text-4xl text-white">
         Ready to see your dream projects come to life?
       </h2>
-      <a
-        className="m-2 p-2 md:p-10 bg-white"
-        href="https://calendly.com/68construction/30min"
-      >
-        <div className="whitespace-nowrap text-black text-3xl">
+      <a className="m-2" href="https://calendly.com/68construction/30min">
+        <div className="whitespace-nowrap text-white text-3xl p-4 bg-red-800">
           Get A Free Consultation
         </div>
       </a>
-      <a
-        className="m-2 md:p-10 p-2 bg-white"
-        href="https://calendly.com/68construction/estimate"
-      >
-        <div className="whitespace-nowrap bg-white text-black text-3xl">
+      <a className="m-2" href="https://calendly.com/68construction/estimate">
+        <div className="whitespace-nowrap text-white text-3xl p-4 bg-red-800">
           Schedule An Estimate
         </div>
       </a>

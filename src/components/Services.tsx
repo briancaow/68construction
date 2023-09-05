@@ -4,6 +4,7 @@ import Service from "./Service";
 export default function Services() {
   const columnWidth = 800;
   const rowHeight = 600;
+  // TODO: Add more services from yelp
   return (
     <div className="shadow-inner relative flex flex-col justify-start items-center w-full bg-gray-200 space-y-8 py-20">
       <h2 className="text-5xl">Services</h2>
@@ -18,7 +19,7 @@ export default function Services() {
           columnWidth={columnWidth}
           rowHeight={rowHeight}
           service={"Bathrooms"}
-          src="/portfolio/bathrooms/bathroom_6.JPG"
+          src="/portfolio/bathrooms/bathroom_5.JPG"
         />
         <Service
           columnWidth={columnWidth}

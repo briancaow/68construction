@@ -8,8 +8,9 @@ export default function About() {
       <div className="max-w-[1200px] flex flex-col lg:flex-row justify-start space-y-4 items-center lg:items-start lg:px-4">
         <Image
           src={"/HenryAboutMePhoto.JPG"}
-          height={600}
           width={300}
+          height={600}
+          style={{ width: "auto", height: "auto" }}
           alt="Photo of Henry"
         />
         <p className="lg:px-4">

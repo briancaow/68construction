@@ -1,8 +1,9 @@
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import sizeMe from "react-sizeme";
 import StackGrid, { Grid } from "react-stack-grid";
 import Dropdown from "react-bootstrap/Dropdown";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Portfolio(props: any) {
   const { width } = props;
@@ -29,23 +30,38 @@ function Portfolio(props: any) {
     Pavements = "Pavements",
   }
 
+  useEffect(() => {
+    setTimeout(() => {
+      gridRef.current?.updateLayout();
+    }, 1000);
+    setTimeout(() => {
+      gridRef.current?.updateLayout();
+    }, 5000);
+  }, []);
+
   const [category, setCategory] = useState(Category.Showers);
   const gridRef = useRef<Grid>();
   const pics = [];
   for (let i = 1; i <= numPics[category]; i++) {
     pics.push(
-      <div className="transition overflow-hidden">
+      <div key={i} className="transition overflow-hidden">
         <a
           href={`/portfolio/${category}/${category.slice(0, -1)}_${i}.JPG`}
           target="_blank"
         >
-          <Image
+          <img
+            className="hover:scale-125 duration-300"
+            src={`/portfolio/${category}/${category.slice(0, -1)}_${i}.JPG`}
+            alt={`portfolio photo: ${i}`}
+          />
+          {/* <Image
             className="hover:scale-125 duration-300"
             alt={`portfolio photo: ${i}`}
             src={`/portfolio/${category}/${category.slice(0, -1)}_${i}.JPG`}
             width={columnWidth}
             height={columnWidth}
-          />
+            style={{ width: "auto", height: "auto" }}
+          /> */}
         </a>
       </div>
     );
@@ -82,6 +98,7 @@ function Portfolio(props: any) {
           gridRef={(grid) => (gridRef.current = grid)}
           monitorImagesLoaded={true}
           columnWidth={columnWidth}
+          duration={0}
         >
           {pics}
         </StackGrid>

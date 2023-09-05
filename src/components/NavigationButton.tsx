@@ -1,12 +1,12 @@
 export default function NavigationButton(props: any) {
+  const possible = ["text-black", "text-gray-300"];
   return (
-    <button
-      className="text-lg p-3 text-red-700"
-      onClick={() => {
-        props.onClick();
-      }}
+    <div
+      className={`text-lg p-3 ${
+        props.isHeader ? "text-black" : "text-gray-300"
+      }`}
     >
       {props.children}
-    </button>
+    </div>
   );
 }
