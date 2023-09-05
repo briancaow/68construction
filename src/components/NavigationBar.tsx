@@ -26,17 +26,25 @@ export default function NavigationBar() {
             <Link href={"/Contact"}>
               <NavigationButton isHeader={true}>Contact</NavigationButton>
             </Link>
-            <NavigationButton isHeader={true}>Testimonials</NavigationButton>
+            <Link href={"/Testimonials"}>
+              <NavigationButton isHeader={true}>Testimonials</NavigationButton>
+            </Link>
             <NavigationButton isHeader={true}>FAQs</NavigationButton>
-            <NavigationButton isHeader={true}>Map</NavigationButton>
+            {/* <NavigationButton isHeader={true}>Map</NavigationButton> */}
           </div>
         </div>
         <div className="right-0 lg:hidden block">
-          <NavDropdown title="Menu" id="collasible-nav-dropdown">
+          <NavDropdown
+            title={<span className="text-black">Menu</span>}
+            id="collasible-nav-dropdown"
+          >
             <NavDropdown.Item href="/AboutUs">About Us</NavDropdown.Item>
             <NavDropdown.Item href="/Services">Services</NavDropdown.Item>
             <NavDropdown.Item href="/Portfolio">Portfolio</NavDropdown.Item>
             <NavDropdown.Item href="/Contact">Contact</NavDropdown.Item>
+            <NavDropdown.Item href="/Testimonials">
+              Testimonials
+            </NavDropdown.Item>
           </NavDropdown>
         </div>
       </div>
