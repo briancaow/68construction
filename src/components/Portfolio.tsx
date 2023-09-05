@@ -50,7 +50,7 @@ function Portfolio(props: any) {
           target="_blank"
         >
           <img
-            className="hover:scale-125 duration-300"
+            className="overflow-hidden hover:scale-125 duration-300"
             src={`/portfolio/${category}/${category.slice(0, -1)}_${i}.JPG`}
             alt={`portfolio photo: ${i}`}
           />

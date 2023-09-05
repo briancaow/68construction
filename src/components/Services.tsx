@@ -12,6 +12,30 @@ export default function Services() {
         <Service
           columnWidth={columnWidth}
           rowHeight={rowHeight}
+          service={"Decks & Railing"}
+          src="/portfolio/decks/deck_3.JPG"
+        />
+        <Service
+          columnWidth={columnWidth}
+          rowHeight={rowHeight}
+          service={"Fences & Gates"}
+          src="/portfolio/fences/fence_3.JPG"
+        />
+        <Service
+          columnWidth={columnWidth}
+          rowHeight={rowHeight}
+          service={"Kitchens"}
+          src="/portfolio/kitchens/kitchen_1.JPG"
+        />
+        <Service
+          columnWidth={columnWidth}
+          rowHeight={rowHeight}
+          service={"Flooring"}
+          src="/portfolio/floorings/flooring_1.JPG"
+        />
+        <Service
+          columnWidth={columnWidth}
+          rowHeight={rowHeight}
           service={"Showers"}
           src="/portfolio/showers/shower_5.JPG"
         />
@@ -24,32 +48,8 @@ export default function Services() {
         <Service
           columnWidth={columnWidth}
           rowHeight={rowHeight}
-          service={"Decks"}
-          src="/portfolio/decks/deck_3.JPG"
-        />
-        <Service
-          columnWidth={columnWidth}
-          rowHeight={rowHeight}
-          service={"Fences"}
-          src="/portfolio/fences/fence_3.JPG"
-        />
-        <Service
-          columnWidth={columnWidth}
-          rowHeight={rowHeight}
           service={"Fire Places"}
           src="/portfolio/fireplaces/fireplace_1.JPG"
-        />
-        <Service
-          columnWidth={columnWidth}
-          rowHeight={rowHeight}
-          service={"Flooring"}
-          src="/portfolio/floorings/flooring_1.JPG"
-        />
-        <Service
-          columnWidth={columnWidth}
-          rowHeight={rowHeight}
-          service={"Kitchens"}
-          src="/portfolio/kitchens/kitchen_1.JPG"
         />
         <Service
           columnWidth={columnWidth}

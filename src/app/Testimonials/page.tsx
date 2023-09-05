@@ -1,7 +1,7 @@
 "use client";
 import { SizeMe } from "react-sizeme";
 import TestimonialCard from "@/components/TestimonialCard";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import StackGrid, { Grid } from "react-stack-grid";
 
 export default function TestimonialPage() {
@@ -42,12 +42,21 @@ export default function TestimonialPage() {
         "I was looking for someone to fix the deck and railing that was not done properly by the previous contractor and found Hung (Henry) through Home Depot Home service. Henry came to check out the project. He told me the best way was to tear down the current deck and rebuild a new one since the current one would not last. He understood that I want to save money and agreed to reuse materials as much as possible. Henry was able to fit me in earlier than previously discussed and he got everything done less than a week which I really appreciated. He knew I was really stressed out from the bad experience with the previous contractor so he made sure I was updated regularly. I am very happy with the results. NO more wavy deck and rattling railings. And The new bench is beautiful. Definitely recommend Henry and will use him again for future projects.",
     },
   ];
+
+  useEffect(() => {
+    setTimeout(() => {
+      gridRef.current?.updateLayout();
+    }, 1000);
+    setTimeout(() => {
+      gridRef.current?.updateLayout();
+    }, 5000);
+  }, []);
   const gridRef = useRef<Grid>();
 
   return (
     <SizeMe>
       {({ size }) => (
-        <div className="mt-20 w-full h-screen justify-start items-center">
+        <div className="mt-20 w-full justify-start items-center mb-10">
           <StackGrid
             gridRef={(grid) => (gridRef.current = grid)}
             monitorImagesLoaded={true}
@@ -57,7 +66,7 @@ export default function TestimonialPage() {
                 : size.width < 640
                 ? 300
                 : size.width < 1024
-                ? 500
+                ? 350
                 : 600
             }
             gutterHeight={20}
