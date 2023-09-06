@@ -6,7 +6,7 @@ export default function Services() {
   const rowHeight = 600;
   // TODO: Add more services from yelp
   return (
-    <div className="shadow-inner relative flex flex-col justify-start items-center w-full bg-gray-200 space-y-8 py-20">
+    <div className="relative flex flex-col justify-start items-center w-full space-y-4">
       <h2 className="text-5xl">Services</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4 gap-4">
         <Service

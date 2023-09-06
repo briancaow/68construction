@@ -17,19 +17,19 @@ export default function Home() {
 
   return (
     <div className="relative flex flex-col">
-      <main className="relative flex flex-col w-full items-center pb-20">
+      <main className="relative flex flex-col w-full items-center">
         <Hero />
 
-        <div ref={AboutUsRef} />
+        {/* <div ref={AboutUsRef} />
         <About />
 
         <div ref={ServicesRef} />
         <Services />
 
         <div ref={PortfolioRef} />
-        <SizeMe>{({ size }) => <Portfolio width={size.width} />}</SizeMe>
+        <SizeMe>{({ size }) => <Portfolio width={size.width} />}</SizeMe> */}
 
-        <ContactForm />
+        {/* <ContactForm /> */}
       </main>
     </div>
   );

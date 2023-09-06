@@ -68,11 +68,20 @@ function Portfolio(props: any) {
   }
 
   return (
-    <div className="flex flex-col items-center px-10 w-full space-y-4 py-20">
+    <div className="flex flex-col items-center px-10 w-full space-y-2">
       <h2 className="text-5xl">Portfolio</h2>
       <Dropdown>
         <Dropdown.Toggle size="lg" variant="secondary">
-          {category}
+          <div className="flex flex-row space-x-2">
+            <div>{category}</div>
+            <img
+              className="fill-white"
+              src="/dropdown.png"
+              alt="dropdown"
+              width={30}
+              height={20}
+            />
+          </div>
         </Dropdown.Toggle>
         <Dropdown.Menu>
           {Object.values(Category).map((key, i) => (

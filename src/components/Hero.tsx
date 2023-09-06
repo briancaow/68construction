@@ -14,15 +14,15 @@ export default function Hero() {
     <div className="relative w-full min-h-screen flex flex-col justify-center items-center">
       <Image
         className="z-0 brightness-[0.40]"
-        src={
-          "https://lh3.googleusercontent.com/pw/AIL4fc9FAi95gInjD54RxJBTFPyEtcyRlatmPyVyhp-c1R9_cEigQgNSqqW2lORTFObccw7SVZaGgEkqIhC2VbH51fXr0kU9HMsmLt4tlmu3IftyUarPeNba=w2400"
-        }
+        src={"/portfolio/decks/deck_3.JPG"}
         alt="deck"
         fill
         style={{ objectFit: "cover" }}
       />
       <div className="z-10 flex flex-col justify-center items-center">
-        <h1 className="lg:text-9xl text-4xl text-red-600">68CONSTRUCTION</h1>
+        <h1 className="lg:text-8xl md:text-6xl text-4xl text-red-600">
+          68CONSTRUCTION
+        </h1>
         <h2 className="lg:text-5xl text-xl whitespace-nowrap text-white">
           Your Vision, Our Expertise
         </h2>
@@ -36,7 +36,7 @@ export default function Hero() {
             <Rating readonly initialValue={5} />
           </a>
         </div>
-        <div className="lg:mt-20 flex flex-col lg:flex-row items-center">
+        <div className="lg:mt-20 flex flex-col md:flex-row items-center">
           <a className="m-2" href="https://calendly.com/68construction/30min">
             <div className="whitespace-nowrap bg-red-800 text-white p-2 lg:text-3xl text-xl">
               Get A Free Consultation

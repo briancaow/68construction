@@ -7,8 +7,8 @@ export default function Footer() {
   return (
     <footer className="flex flex-col bg-gray-700 justify-center items-center py-4">
       <h1 className="lg:text-4xl text-xl text-gray-300">68CONSTRUCTION</h1>
-      <div className="pr-3 space-x-3 hidden lg:block">
-        <div className="flex flex-row items-center justify-center w-full">
+      <div className="pr-3 space-x-3 block">
+        <div className="flex flex-row flex-wrap items-center justify-center w-full">
           <Link href={"/AboutUs"}>
             <NavigationButton isHeader={false}>About Us</NavigationButton>
           </Link>
