@@ -49,22 +49,22 @@ function Portfolio(props: any) {
           href={`/portfolio/${category}/${category.slice(0, -1)}_${i}.JPG`}
           target="_blank"
         >
-          <img
+          {/* <img
             className="overflow-hidden hover:scale-125 duration-300"
             src={`/portfolio/${category}/${category.slice(
               0,
               -1
             )}_${i}.JPG`.toLowerCase()}
             alt={`portfolio photo: ${i}`}
-          />
-          {/* <Image
+          /> */}
+          <Image
             className="hover:scale-125 duration-300"
             alt={`portfolio photo: ${i}`}
             src={`/portfolio/${category}/${category.slice(0, -1)}_${i}.JPG`}
             width={columnWidth}
             height={columnWidth}
             style={{ width: "auto", height: "auto" }}
-          /> */}
+          />
         </a>
       </div>
     );
