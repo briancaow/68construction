@@ -25,7 +25,7 @@ export default function Footer() {
             <NavigationButton isHeader={false}>Testimonials</NavigationButton>
           </Link>
           <NavigationButton isHeader={false}>FAQs</NavigationButton>
-          <NavigationButton isHeader={false}>Map</NavigationButton>
+          {/* <NavigationButton isHeader={false}>Map</NavigationButton> */}
         </div>
       </div>
       <div className="flex flex-row justify-center space-x-2">
