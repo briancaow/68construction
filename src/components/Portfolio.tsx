@@ -46,7 +46,10 @@ function Portfolio(props: any) {
     pics.push(
       <div key={i} className="transition overflow-hidden">
         <a
-          href={`/portfolio/${category}/${category.slice(0, -1)}_${i}.JPG`}
+          href={
+            `/portfolio/${category}/${category.slice(0, -1)}_${i}`.toLowerCase +
+            `.JPG`
+          }
           target="_blank"
         >
           {/* <img
@@ -57,14 +60,20 @@ function Portfolio(props: any) {
             )}_${i}.JPG`.toLowerCase()}
             alt={`portfolio photo: ${i}`}
           /> */}
-          <Image
-            className="hover:scale-125 duration-300"
-            alt={`portfolio photo: ${i}`}
-            src={`/portfolio/${category}/${category.slice(0, -1)}_${i}.JPG`}
-            width={columnWidth}
-            height={columnWidth}
-            style={{ width: "auto", height: "auto" }}
-          />
+          <div className="unset-img full-bleed">
+            <Image
+              // className="hover:scale-125 duration-300"
+              className="custom-img"
+              alt={`portfolio photo: ${i}`}
+              src={
+                `/portfolio/${category}/${category.slice(
+                  0,
+                  -1
+                )}_${i}.`.toLowerCase() + `JPG`
+              }
+              layout="fill"
+            />
+          </div>
         </a>
       </div>
     );
