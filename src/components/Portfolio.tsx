@@ -46,10 +46,7 @@ function Portfolio(props: any) {
     pics.push(
       <div key={i} className="transition overflow-hidden">
         <a
-          href={
-            `/portfolio/${category}/${category.slice(0, -1)}_${i}`.toLowerCase +
-            `.JPG`
-          }
+          href={`/portfolio/${category}/${category.slice(0, -1)}_${i}.JPG`}
           target="_blank"
         >
           {/* <img
@@ -71,6 +68,7 @@ function Portfolio(props: any) {
                   -1
                 )}_${i}.`.toLowerCase() + `JPG`
               }
+              priority
               layout="fill"
             />
           </div>
