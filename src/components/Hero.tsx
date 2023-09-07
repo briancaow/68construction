@@ -23,7 +23,7 @@ export default function Hero() {
         {/* <h1 className="lg:text-8xl md:text-6xl text-4xl text-red-600">
           68CONSTRUCTION
         </h1> */}
-        <h2 className="lg:text-5xl text-xl whitespace-nowrap text-white">
+        <h2 className="lg:text-5xl text-3xl whitespace-nowrap text-white">
           Your Vision, Our Expertise
         </h2>
         <div className="flex flex-col lg:text-2xl text-white items-center">
