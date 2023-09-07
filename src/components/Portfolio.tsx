@@ -85,7 +85,7 @@ function Portfolio(props: any) {
   return (
     <div className="flex flex-col items-center px-10 w-full space-y-2">
       <h2 className="text-5xl">Portfolio</h2>
-      <Dropdown>
+      <Dropdown className="bg-gray-500">
         <Dropdown.Toggle size="lg" variant="secondary">
           <div className="flex flex-row space-x-2">
             <div>{category}</div>
