@@ -37,6 +37,10 @@ svg.star-svg {
   position: relative !important;
   height: unset !important;
 }
+/* .custom-img:hover {
+  transform: scale(1.25);
+  transition-duration: 300ms;
+} */
 
 .unset-img {
   width: 100%;

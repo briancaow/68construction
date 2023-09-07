@@ -7,7 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function Portfolio(props: any) {
   const { width } = props;
-  const columnWidth = width >= 1024 ? 600 : width >= 768 ? 500 : 300;
+  const columnWidth =
+    width < 780 ? width - 80 : width < 1200 ? width / 2 - 80 : width / 3 - 40;
   const numPics = {
     Showers: 6,
     Bathrooms: 7,
@@ -54,7 +55,7 @@ function Portfolio(props: any) {
           }
           target="_blank"
         >
-          <img
+          {/* <img
             className="overflow-hidden hover:scale-125 duration-300"
             src={
               `/portfolio/${category}/${category.slice(
@@ -63,11 +64,12 @@ function Portfolio(props: any) {
               )}_${i}`.toLowerCase() + `.JPG`
             }
             alt={`portfolio photo: ${i}`}
-          />
-          {/* <div className="unset-img full-bleed">
+          /> */}
+          {/* <div className="unset-img full-bleed"> */}
+          <div className="relative">
             <Image
               // className="hover:scale-125 duration-300"
-              className="custom-img"
+              className="custom-img hover:scale-125 duration-300"
               alt={`portfolio photo: ${i}`}
               src={
                 `/portfolio/${category}/${category.slice(
@@ -75,10 +77,11 @@ function Portfolio(props: any) {
                   -1
                 )}_${i}.`.toLowerCase() + `JPG`
               }
-              priority
               layout="fill"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-          </div> */}
+          </div>
+          {/* </div> */}
         </a>
       </div>
     );
@@ -124,7 +127,6 @@ function Portfolio(props: any) {
           gridRef={(grid) => (gridRef.current = grid)}
           monitorImagesLoaded={true}
           columnWidth={columnWidth}
-          duration={0}
         >
           {pics}
         </StackGrid>
