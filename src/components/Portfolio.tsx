@@ -54,15 +54,17 @@ function Portfolio(props: any) {
           }
           target="_blank"
         >
-          {/* <img
+          <img
             className="overflow-hidden hover:scale-125 duration-300"
-            src={`/portfolio/${category}/${category.slice(
-              0,
-              -1
-            )}_${i}.JPG`.toLowerCase()}
+            src={
+              `/portfolio/${category}/${category.slice(
+                0,
+                -1
+              )}_${i}`.toLowerCase() + `.JPG`
+            }
             alt={`portfolio photo: ${i}`}
-          /> */}
-          <div className="unset-img full-bleed">
+          />
+          {/* <div className="unset-img full-bleed">
             <Image
               // className="hover:scale-125 duration-300"
               className="custom-img"
@@ -76,7 +78,7 @@ function Portfolio(props: any) {
               priority
               layout="fill"
             />
-          </div>
+          </div> */}
         </a>
       </div>
     );
