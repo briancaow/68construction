@@ -20,18 +20,15 @@ export default function Hero() {
         style={{ objectFit: "cover" }}
       />
       <div className="z-10 flex flex-col justify-center items-center">
-        <h1 className="lg:text-8xl md:text-6xl text-4xl text-red-600">
+        {/* <h1 className="lg:text-8xl md:text-6xl text-4xl text-red-600">
           68CONSTRUCTION
-        </h1>
+        </h1> */}
         <h2 className="lg:text-5xl text-xl whitespace-nowrap text-white">
           Your Vision, Our Expertise
         </h2>
         <div className="flex flex-col lg:text-2xl text-white items-center">
           {getExperience() + " years of building stunning projects"}
-          <a
-            className="lg:mt-5"
-            href="https://www.yelp.com/biz/68-construction-seattle-2"
-          >
+          <a className="lg:mt-5" href="/Testimonials">
             <p className="text-white">(5.0 Client Ratings)</p>
             <Rating readonly initialValue={5} />
           </a>
