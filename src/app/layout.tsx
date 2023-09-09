@@ -10,7 +10,7 @@ import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "68CONSTRUCTION",
+  title: "68Construction",
   description:
     "At 68Construction, we transform your visions into stunning projects. With unwavering dedication and a commitment to excellence, we are your trusted partners in the world of construction.",
 };

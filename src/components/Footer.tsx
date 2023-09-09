@@ -24,7 +24,7 @@ export default function Footer() {
           <Link href={"/Testimonials"}>
             <NavigationButton isHeader={false}>Testimonials</NavigationButton>
           </Link>
-          <NavigationButton isHeader={false}>FAQs</NavigationButton>
+          {/* <NavigationButton isHeader={false}>FAQs</NavigationButton> */}
           {/* <NavigationButton isHeader={false}>Map</NavigationButton> */}
         </div>
       </div>

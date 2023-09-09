@@ -29,7 +29,7 @@ export default function NavigationBar() {
             <Link href={"/Testimonials"}>
               <NavigationButton isHeader={true}>Testimonials</NavigationButton>
             </Link>
-            <NavigationButton isHeader={true}>FAQs</NavigationButton>
+            {/* <NavigationButton isHeader={true}>FAQs</NavigationButton> */}
             {/* <NavigationButton isHeader={true}>Map</NavigationButton> */}
           </div>
         </div>
