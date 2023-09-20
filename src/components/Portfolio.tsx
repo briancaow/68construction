@@ -4,6 +4,7 @@ import sizeMe from "react-sizeme";
 import StackGrid, { Grid } from "react-stack-grid";
 import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
+import PortfolioModal from "./PortfolioModal";
 
 export interface Pic {
   id: string;
@@ -24,6 +25,8 @@ function Portfolio(props: any) {
 
   const [category, setCategory] = useState(Category.Showers);
   const [images, setImages] = useState<[Pic]>();
+  const [modalShow, setModalShow] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const { width } = props;
   const columnWidth =
     width < 780 ? width - 80 : width < 1200 ? width / 2 - 80 : width / 3 - 40;
@@ -92,26 +95,37 @@ function Portfolio(props: any) {
           columnWidth={columnWidth}
         >
           {images &&
-            images.map((image) => (
-              <div key={image.id} className="transition overflow-hidden">
-                <a
-                  href={`https://storage.googleapis.com/68construction-photos/${image.name}`}
-                  target="_blank"
-                >
-                  <div className="relative">
-                    <Image
-                      className="custom-img hover:scale-125 duration-300"
-                      alt={`portfolio photo: ${image.name}`}
-                      src={`https://storage.googleapis.com/68construction-photos/${image.name}`}
-                      layout="fill"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                  </div>
-                </a>
+            images.map((image, i) => (
+              <div
+                key={image.id}
+                className="transition overflow-hidden"
+                onClick={() => {
+                  setSelectedIndex(i);
+                  setModalShow(true);
+                }}
+              >
+                <div className="relative">
+                  <Image
+                    className="custom-img hover:scale-125 duration-300"
+                    alt={`portfolio photo: ${image.name}`}
+                    src={`https://storage.googleapis.com/68construction-photos/${image.name}`}
+                    layout="fill"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                </div>
               </div>
             ))}
         </StackGrid>
       </div>
+      <PortfolioModal
+        images={images}
+        selectedIndex={selectedIndex}
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        handleSelect={(index: number) => {
+          setSelectedIndex(index);
+        }}
+      />
     </div>
   );
 }
