@@ -11,9 +11,6 @@ export default function PortfolioModal(props: any) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header>
-        <h1 className="w-full text-center">Portfolio</h1>
-      </Modal.Header>
       <Modal.Body>
         <div className="flex items-center justify-center w-full">
           <Carousel
@@ -28,14 +25,14 @@ export default function PortfolioModal(props: any) {
             {props.images &&
               props.images.map((image: Pic) => (
                 <Carousel.Item key={image.id}>
-                  <div className="flex items-center justify-center w-[1100px] h-[1000px] bg-black">
-                    <div className="relative">
+                  <div className="popup-img">
+                    <div className="relative bg-red-500">
                       <Image
                         className="custom-img"
                         alt={`portfolio photo: ${image.name}`}
                         src={`https://storage.googleapis.com/68construction-photos/${image.name}`}
                         layout="fill"
-                        sizes="80vw"
+                        sizes="100vw"
                       />
                     </div>
                   </div>
