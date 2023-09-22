@@ -100,8 +100,8 @@ function Portfolio(props: any) {
                 key={image.id}
                 className="transition overflow-hidden"
                 onClick={() => {
-                  setSelectedIndex(i);
                   setModalShow(true);
+                  setSelectedIndex(i);
                 }}
               >
                 <div className="relative">
