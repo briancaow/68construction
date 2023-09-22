@@ -15,7 +15,7 @@ export default function PortfolioModal(props: any) {
       <Modal.Body>
         <div className="w-full h-full">
           <Carousel
-            activeIndex={props.selectedIndex}
+            defaultActiveIndex={props.selectedIndex}
             onSelect={props.handleSelect}
             interval={null}
             slide={false}
