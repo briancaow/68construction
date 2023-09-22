@@ -39,7 +39,6 @@ function Portfolio(props: any) {
           "&fields=items(name,id)"
       );
       const data = await res.json();
-      console.log("data: " + JSON.stringify(data));
       setImages(data.items);
     }
     getImages();
