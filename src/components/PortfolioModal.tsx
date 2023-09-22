@@ -5,7 +5,9 @@ import Image from "next/image";
 
 export default function PortfolioModal(props: any) {
   console.log("index: " + props.selectedIndex);
-  console.log("image: " + JSON.stringify(props.images[props.selectedIndex]));
+  if (props.images) {
+    console.log("image: " + JSON.stringify(props.images[props.selectedIndex]));
+  }
   return (
     <Modal
       {...props}
