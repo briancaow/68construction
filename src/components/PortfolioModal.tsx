@@ -12,7 +12,7 @@ export default function PortfolioModal(props: any) {
       centered
     >
       <Modal.Body>
-        <div className="w-full h-full bg-red-500">
+        <div className="w-full h-full">
           <Carousel
             activeIndex={props.selectedIndex}
             onSelect={props.handleSelect}
@@ -33,7 +33,7 @@ export default function PortfolioModal(props: any) {
                       alt={`portfolio photo: ${image.name}`}
                       fill={true}
                       objectFit="contain"
-                      // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
                     />
                   </div>
                   {/* </div> */}
