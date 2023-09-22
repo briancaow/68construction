@@ -12,7 +12,7 @@ export default function PortfolioModal(props: any) {
       centered
     >
       <Modal.Body>
-        <div className="flex items-center justify-center w-full">
+        <div className="w-full h-full bg-red-500">
           <Carousel
             activeIndex={props.selectedIndex}
             onSelect={props.handleSelect}
@@ -25,17 +25,18 @@ export default function PortfolioModal(props: any) {
             {props.images &&
               props.images.map((image: Pic) => (
                 <Carousel.Item key={image.id}>
-                  <div className="popup-img">
-                    <div className="relative bg-red-500">
-                      <Image
-                        className="custom-img"
-                        alt={`portfolio photo: ${image.name}`}
-                        src={`https://storage.googleapis.com/68construction-photos/${image.name}`}
-                        layout="fill"
-                        sizes="100vw"
-                      />
-                    </div>
+                  {/* <div className="w-full h-full"> */}
+                  <div className="relative w-full h-[50vh] lg:h-[90vh] bg-black">
+                    <Image
+                      //   className="custom-img"
+                      src={`https://storage.googleapis.com/68construction-photos/${image.name}`}
+                      alt={`portfolio photo: ${image.name}`}
+                      fill={true}
+                      objectFit="contain"
+                      // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                    />
                   </div>
+                  {/* </div> */}
                 </Carousel.Item>
               ))}
           </Carousel>

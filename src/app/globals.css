@@ -49,21 +49,36 @@ svg.star-svg {
   position: unset !important;
 }
 
-.carousel {
+/* .carousel {
   display: flex;
   width: 100%;
-  height: 90vh;
+  height: 50vh;
   align-items: center;
   justify-content: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: red;
-}
-.popup-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 90vh;
   background-color: black;
+} */
+.carousel {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: purple;
+}
+
+@media (min-width: 1024px) {
+  .carousel {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
