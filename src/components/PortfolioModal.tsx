@@ -4,10 +4,8 @@ import { Pic } from "./Portfolio";
 import Image from "next/image";
 
 export default function PortfolioModal(props: any) {
-  console.log("index: " + props.selectedIndex);
-  if (props.images) {
-    console.log("image: " + JSON.stringify(props.images[props.selectedIndex]));
-  }
+  const [index, setIndex] = useState(props.selectedIndex);
+
   return (
     <Modal
       {...props}
@@ -18,8 +16,10 @@ export default function PortfolioModal(props: any) {
       <Modal.Body>
         <div className="w-full h-full">
           <Carousel
-            activeIndex={props.selectedIndex}
-            onSelect={props.handleSelect}
+            activeIndex={index}
+            onSelect={(index: number) => {
+              setIndex(index);
+            }}
             interval={null}
             slide={false}
             touch={true}

@@ -121,9 +121,6 @@ function Portfolio(props: any) {
         selectedIndex={selectedIndex}
         show={modalShow}
         onHide={() => setModalShow(false)}
-        handleSelect={(index: number) => {
-          setSelectedIndex(index);
-        }}
       />
     </div>
   );
