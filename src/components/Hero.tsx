@@ -24,7 +24,7 @@ export default function Hero() {
           68CONSTRUCTION
         </h1> */}
         <h2 className="lg:text-5xl text-3xl whitespace-nowrap text-white">
-          Your Vision, Our Expertise
+          Integrity, Value, and Trust
         </h2>
         <div className="flex flex-col lg:text-2xl text-white items-center">
           {getExperience() + " years of building stunning projects"}
