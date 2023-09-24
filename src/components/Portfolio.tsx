@@ -95,9 +95,9 @@ function Portfolio(props: any) {
         >
           {images &&
             images.map((image, i) => (
-              <div
+              <button
                 key={image.id}
-                className="transition overflow-hidden"
+                className="transition overflow-hidden w-full h-full"
                 onClick={() => {
                   setModalShow(true);
                   setSelectedIndex(i);
@@ -112,7 +112,7 @@ function Portfolio(props: any) {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
-              </div>
+              </button>
             ))}
         </StackGrid>
       </div>
