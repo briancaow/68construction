@@ -4,7 +4,7 @@ import { Pic } from "./Portfolio";
 import Image from "next/image";
 
 export default function PortfolioModal(props: any) {
-  const [index, setIndex] = useState(props.selectedIndex);
+  //   const [index, setIndex] = useState(props.selectedIndex);
 
   return (
     <Modal
@@ -16,10 +16,8 @@ export default function PortfolioModal(props: any) {
       <Modal.Body>
         <div className="w-full h-full">
           <Carousel
-            activeIndex={index}
-            onSelect={(index: number) => {
-              setIndex(index);
-            }}
+            defaultActiveIndex={props.selectedIndex}
+            onSelect={props.handleSelect}
             interval={null}
             slide={false}
             touch={true}

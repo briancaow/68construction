@@ -119,6 +119,9 @@ function Portfolio(props: any) {
       <PortfolioModal
         images={images}
         selectedIndex={selectedIndex}
+        handleSelect={(index: number) => {
+          setSelectedIndex(index);
+        }}
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
