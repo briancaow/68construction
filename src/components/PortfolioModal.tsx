@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button, Carousel, Modal } from "react-bootstrap";
 import { Pic } from "./Portfolio";
 import Image from "next/image";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function PortfolioModal(props: any) {
   //   const [index, setIndex] = useState(props.selectedIndex);
