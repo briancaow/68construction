@@ -99,8 +99,8 @@ function Portfolio(props: any) {
                 key={image.id}
                 className="transition overflow-hidden w-full h-full"
                 onClick={() => {
-                  setModalShow(true);
                   setSelectedIndex(i);
+                  setModalShow(true);
                 }}
               >
                 <div className="relative">
