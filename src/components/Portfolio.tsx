@@ -95,7 +95,7 @@ function Portfolio(props: any) {
         >
           {images &&
             images.map((image, i) => (
-              <button
+              <div
                 key={image.id}
                 className="transition overflow-hidden w-full h-full"
                 onClick={() => {
@@ -112,7 +112,7 @@ function Portfolio(props: any) {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
-              </button>
+              </div>
             ))}
         </StackGrid>
       </div>
