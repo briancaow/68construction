@@ -8,7 +8,7 @@ export default function About() {
         <p className="lg:px-4 text-xl">
           Welcome to 68Construction!!! I&apos;m thrilled to share my journey and
           introduce myself as the founder of this company. My name is Hung
-          Nguyen, and at 28 years old, I embarked on a path that led me to where
+          Nguyen, and at 30 years old, I embarked on a path that led me to where
           I am today. <br />
           <br />
           My journey in the construction industry began after graduating from
