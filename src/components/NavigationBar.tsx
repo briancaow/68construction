@@ -9,7 +9,7 @@ export default function NavigationBar() {
     <header className="fixed top-0 z-20 w-full">
       <div className="flex flex-row items-center justify-between pt-1 bg-opacity-90 bg-slate-50">
         <Link href={"/"}>
-          <h1 className="lg:text-4xl text-3xl ml-4">68 CONSTRUCTION & MECHANICAL</h1>
+          <h1 className="lg:text-4xl text-3xl ml-4 whitespace-nowrap">68 CONSTRUCTION & MECHANICAL</h1>
         </Link>
 
         <div className="pr-3 space-x-3 hidden lg:block w-full">
