@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="flex flex-col bg-gray-700 justify-center items-center py-4">
-      <h1 className="lg:text-4xl text-xl text-gray-300">68CONSTRUCTION</h1>
+      <h1 className="lg:text-4xl text-xl text-gray-300">68 CONSTRUCTION & MECHANICAL</h1>
       <div className="pr-3 space-x-3 block">
         <div className="flex flex-row flex-wrap items-center justify-center w-full">
           <Link href={"/AboutUs"}>
