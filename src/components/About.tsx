@@ -6,7 +6,7 @@ export default function About() {
       <h2 className="text-5xl">About Us</h2>
       <div className="max-w-[1000px] flex flex-col justify-center space-y-4 items-center lg:px-4">
         <p className="lg:px-4 text-xl">
-          Welcome to 68Construction!!! I&apos;m thrilled to share my journey and
+          Welcome to 68Construction! I&apos;m thrilled to share my journey and
           introduce myself as the founder of this company. My name is Hung
           Nguyen, and at 30 years old, I embarked on a path that led me to where
           I am today. <br />
