@@ -35,7 +35,7 @@ export default function Hero() {
         </div>
         <div className="lg:mt-20 flex flex-col md:flex-row items-center">
           <a className="m-2" href="mailto:68constructionllc@gmail.com">
-            <div className="whitespace-nowrap bg-red-800 text-white p-2 lg:text-3xl text-xl">
+            <div className="whitespace-nowrap bg-orange-500 text-white p-2 lg:text-3xl text-xl">
               Get A Free Consultation
             </div>
           </a>
@@ -43,7 +43,7 @@ export default function Hero() {
             className="m-2"
             href="https://calendly.com/68construction/estimate"
           >
-            <div className="whitespace-nowrap bg-red-800 text-white p-2 lg:text-3xl text-xl">
+            <div className="whitespace-nowrap bg-orange-500 text-white p-2 lg:text-3xl text-xl">
               Schedule An Estimate
             </div>
           </a>
