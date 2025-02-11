@@ -9,10 +9,17 @@ export default function Services() {
     <div className="relative flex flex-col justify-start items-center w-full space-y-4">
       <h2 className="text-5xl">Services</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4 gap-4">
+        />
         <Service
           columnWidth={columnWidth}
           rowHeight={rowHeight}
-          service={"Decks & Railing"}
+          service={"Full-House Remodeling and Renovation "}
+          src="/portfolio/pavements/pavement_6.JPG"
+        />  
+        <Service
+          columnWidth={columnWidth}
+          rowHeight={rowHeight}
+          service={"Decks, Railing, Patio Build"}
           src="/portfolio/decks/deck_3.JPG"
         />
         <Service
@@ -24,26 +31,26 @@ export default function Services() {
         <Service
           columnWidth={columnWidth}
           rowHeight={rowHeight}
-          service={"Kitchens"}
-          src="/portfolio/kitchens/kitchen_1.JPG"
+          service={"Kitchen Remodeling"}
+          src="/portfolio/kitchens/087EFF61-474D-4367-A446-8D1663E50E14.jpeg"
         />
         <Service
           columnWidth={columnWidth}
           rowHeight={rowHeight}
           service={"Flooring"}
-          src="/portfolio/floorings/flooring_1.JPG"
+          src="/portfolio/floorings/IMG_0611.JPG"
         />
         <Service
           columnWidth={columnWidth}
           rowHeight={rowHeight}
-          service={"Showers"}
-          src="/portfolio/showers/shower_5.JPG"
+          service={"Shower Remodeling"}
+          src="/portfolio/showers/E4FF55E0-4016-4520-876E-120E0D6C8835.jpeg"
         />
         <Service
           columnWidth={columnWidth}
           rowHeight={rowHeight}
-          service={"Bathrooms"}
-          src="/portfolio/bathrooms/bathroom_5.JPG"
+          service={"Bathroom Remodeling"}
+          src="/portfolio/bathrooms/Bathroom 1.jpeg"
         />
         <Service
           columnWidth={columnWidth}
@@ -56,6 +63,25 @@ export default function Services() {
           rowHeight={rowHeight}
           service={"Pavement"}
           src="/portfolio/pavements/pavement_6.JPG"
+        />
+        <Service
+          columnWidth={columnWidth}
+          rowHeight={rowHeight}
+          service={"New HVAC & Water Heaters Installation"}
+          src="/portfolio/pavements/pavement_6.JPG"
+        />
+        <Service
+          columnWidth={columnWidth}
+          rowHeight={rowHeight}
+          service={"Roofing"}
+          src="/portfolio/pavements/pavement_6.JPG"
+        />
+        <Service
+          columnWidth={columnWidth}
+          rowHeight={rowHeight}
+          service={"Siding"}
+          src="/portfolio/pavements/pavement_6.JPG"
+        
         />
       </div>
     </div>
