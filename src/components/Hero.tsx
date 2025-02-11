@@ -34,7 +34,7 @@ export default function Hero() {
           </a>
         </div>
         <div className="lg:mt-20 flex flex-col md:flex-row items-center">
-          <a className="m-2" href="https://calendly.com/68construction/30min">
+          <a className="m-2" href="mailto:68constructionllc@gmail.com">
             <div className="whitespace-nowrap bg-red-800 text-white p-2 lg:text-3xl text-xl">
               Get A Free Consultation
             </div>

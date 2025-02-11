@@ -39,8 +39,8 @@ function Portfolio(props: any) {
     async function getImages() {
       const res = await fetch(
         "https://storage.googleapis.com/storage/v1/b/68construction-photos/o?prefix=portfolio/" +
-          category.toLowerCase().replace(/\s+/g, '') +
-          "&fields=items(name,id)"
+        category.toLowerCase().replace(/\s+/g, '') +
+        "&fields=items(name,id)"
       );
       const data = await res.json();
       setImages(data.items);
@@ -58,7 +58,7 @@ function Portfolio(props: any) {
 
   return (
     <div className="flex flex-col items-center px-10 w-full space-y-2">
-      <h2 className="text-5xl">Portfolio</h2>
+      <h2 className="text-5xl">Check Out Our Latest Remodeling Projects</h2>
       <Dropdown className="bg-gray-500">
         <Dropdown.Toggle size="lg" variant="secondary">
           <div className="flex flex-row space-x-2">
