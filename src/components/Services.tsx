@@ -9,7 +9,6 @@ export default function Services() {
     <div className="relative flex flex-col justify-start items-center w-full space-y-4">
       <h2 className="text-5xl">Services</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4 gap-4">
-        />
         <Service
           columnWidth={columnWidth}
           rowHeight={rowHeight}
