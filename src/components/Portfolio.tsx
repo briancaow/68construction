@@ -13,17 +13,21 @@ export interface Pic {
 
 function Portfolio(props: any) {
   enum Category {
+    FullHouseRemodelingAndReno = "Full-House Remodeling and Renovation",
     Showers = "Showers",
     Bathrooms = "Bathrooms",
+    Kitchens = "Kitchens",
+    HVAC = "HVAC",
+    Siding = "Siding",
+    Roofing = "Roofing",
+    Floorings = "Floorings",
     Decks = "Decks",
     Fences = "Fences",
-    Fireplaces = "Fireplaces",
-    Floorings = "Floorings",
-    Kitchens = "Kitchens",
     Pavements = "Pavements",
+    Fireplaces = "Fireplaces",
   }
 
-  const [category, setCategory] = useState(Category.Showers);
+  const [category, setCategory] = useState(Category.Kitchens);
   const [images, setImages] = useState<[Pic]>();
   const [modalShow, setModalShow] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -35,7 +39,7 @@ function Portfolio(props: any) {
     async function getImages() {
       const res = await fetch(
         "https://storage.googleapis.com/storage/v1/b/68construction-photos/o?prefix=portfolio/" +
-          category.toLowerCase() +
+          category.toLowerCase().replace(/\s+/g, '') +
           "&fields=items(name,id)"
       );
       const data = await res.json();
