@@ -13,13 +13,13 @@ export default function Services() {
           columnWidth={columnWidth}
           rowHeight={rowHeight}
           service={"Full-House Remodeling and Renovation "}
-          src="/portfolio/pavements/full house remodel.jpeg"
+          src="/portfolio/fullhouseremodel/full house remodel.jpeg"
         />
         <Service
           columnWidth={columnWidth}
           rowHeight={rowHeight}
           service={"Shower Remodeling"}
-          src="/portfolio/showers/E4FF55E0-4016-4520-876E-120E0D6C8835.jpeg"
+          src="/portfolio/showers/A6C71DCF-13DC-4F90-8934-3D0CE959BE89.jpeg"
         />
         <Service
           columnWidth={columnWidth}
@@ -37,19 +37,19 @@ export default function Services() {
           columnWidth={columnWidth}
           rowHeight={rowHeight}
           service={"New HVAC & Water Heaters Installation"}
-          src="/portfolio/pavements/pavement_6.JPG"
+          src="/portfolio/hvac/hvac.jpeg"
         />
         <Service
           columnWidth={columnWidth}
           rowHeight={rowHeight}
           service={"Siding"}
-          src="/portfolio/pavements/pavement_6.JPG"
+          src="/portfolio/siding/siding.jpeg"
         />
         <Service
           columnWidth={columnWidth}
           rowHeight={rowHeight}
           service={"Roofing"}
-          src="/portfolio/pavements/pavement_6.JPG"
+          src="/portfolio/roofing/roof.jpeg"
         />
         <Service
           columnWidth={columnWidth}
