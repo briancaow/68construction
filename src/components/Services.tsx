@@ -13,7 +13,7 @@ export default function Services() {
           columnWidth={columnWidth}
           rowHeight={rowHeight}
           service={"Full-House Remodeling and Renovation "}
-          src="/portfolio/pavements/full house remodel.jpg"
+          src="/portfolio/pavements/full house remodel.jpeg"
         />
         <Service
           columnWidth={columnWidth}
