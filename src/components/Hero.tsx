@@ -24,10 +24,10 @@ export default function Hero() {
           68CONSTRUCTION
         </h1> */}
         <h2 className="lg:text-5xl text-3xl whitespace-nowrap text-white">
-          Your Trusted Greater Seattle Construction Partner. Building with Integrity, Delivering Value, Earning Trust.
+          Building with Integrity, Delivering Value, Earning Trust.
         </h2>
         <div className="flex flex-col lg:text-2xl text-white items-center">
-          {"Building Stunning Projects Since 2018. Your 100% Trusted and Reliable General Contractor"}
+          {"Your Trusted Greater Seattle Construction Partner, Building Stunning Projects Since 2018. A 100% Trusted and Reliable General Contractor"}
           <a className="lg:mt-5" href="/Testimonials">
             <p className="text-white">(5.0 Client Ratings)</p>
             <Rating readonly initialValue={5} />
