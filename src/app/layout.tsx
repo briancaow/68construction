@@ -10,9 +10,9 @@ import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "68Construction",
+  title: "68 Construction & Mechanical",
   description:
-    "At 68Construction, we transform your visions into stunning projects. With unwavering dedication and a commitment to excellence, we are your trusted partners in the world of construction.",
+    "68 Construction & Mechanical: Your go-to general contractor. Transforming visions into stunning projects! Full remodels, kitchens, baths, decks, patios, roofing, siding & HVAC. Let's build together!",
 };
 
 export default function RootLayout({
