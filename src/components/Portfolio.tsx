@@ -43,6 +43,10 @@ function Portfolio(props: any) {
         "&fields=items(name,id)"
       );
       const data = await res.json();
+      console.log(data.items);
+
+      // remove any non-images
+      data.items = data.items.filter((item:any)=> !item.id.includes("//"))
       setImages(data.items);
     }
     getImages();
