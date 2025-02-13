@@ -32,8 +32,17 @@ function Portfolio(props: any) {
   const [modalShow, setModalShow] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const { width } = props;
+
+  // Logic for column width of grid
   const columnWidth =
-    width < 780 ? width - 80 : width < 1200 ? width / 2 - 80 : width / 3 - 40;
+    width < 700 ?
+      width - 80 :
+        width < 1000 ?
+          width / 2 - 80 :
+            width < 1300 ?
+              width / 3 - 80 :
+                width < 1600 ?
+                  width / 4 - 40 : width / 5 - 40;
 
   useEffect(() => {
     async function getImages() {
